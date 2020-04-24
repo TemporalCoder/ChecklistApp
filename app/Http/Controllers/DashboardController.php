@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Droids;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
-    /**
+        /**
      * Create a new controller instance.
      *
      * @return void
@@ -15,14 +16,14 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-    /**
+        /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index(Request $request)
     {
-        return view('home');
+        $droids = Droids::all();
+        return view('dashboard')->with('droids', $droids);
     }
 }

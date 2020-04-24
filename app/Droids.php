@@ -8,8 +8,8 @@ use App\User;
 
 class Droids extends Model
 {
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany('App\User');
     }
 }

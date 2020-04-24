@@ -14,17 +14,20 @@ use Illuminate\Support\Facades\Auth;
 */
 Auth::routes();
 
+//Home
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Admin
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
+    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
+});
+
+//Dashboard
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
+//Droids
 Route::get('/', 'DroidController@index');
 Route::get('/home', 'DroidController@droids_all');
 
 Route::get('all_list', 'DroidController@droids_all');
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
-    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-});
