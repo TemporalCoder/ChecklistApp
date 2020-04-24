@@ -22,24 +22,25 @@
                         <tr>
                             <th scope="row">{{ $droid->id }}</th>
                             <td>{{ $droid->class }}</td>
-                            <td>{{ $droid->path }}</td>
-                            {{-- <td>{{ implode(' , ' ,$user->roles()->get()->pluck('name')->toArray() ) }}</td>
-                            <td>
-                                @can('edit-users')
-                                    <a href="{{ route('admin.users.edit',$user->id) }}"><button type="button" class="btn btn-warning float-left">Edit</button></a>
-                                <form action="{{ route('admin.users.destroy', $user) }}" method="POST" class="float-left">
-                                @csrf
-                                {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-                                @endcan
-                            </td> --}}
+                            <td><a href="storage {{ $droid->path }}"></a></td>
                           </tr>
                         @endforeach
                     </tbody>
                 </table>
         </div>
         </div>
+
+        <div class="card">
+            <div class="card-header">My Droids</div>
+
+            <div class="card-body">
+                @foreach($droids as $droid)
+                <li>{{ $droid->class  }}</li>
+                <li><img src="{{ $droid->path }}" class="img-fluid"></li>
+                @endforeach
+            </div>
+        </div>
+
     </div>
 </div>
 </div>

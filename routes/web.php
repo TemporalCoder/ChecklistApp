@@ -26,6 +26,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
+//User
+Route::post('/dashboard/{$user->id}', 'DroidController@add_users_droid');
+
 //Droids
 Route::get('/', 'DroidController@index');
 Route::get('/home', 'DroidController@droids_all');

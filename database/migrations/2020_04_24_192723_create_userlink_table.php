@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDroidsTable extends Migration
+class CreateUserlinkTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateDroidsTable extends Migration
      */
     public function up()
     {
-        Schema::create('droids', function (Blueprint $table) {
+        Schema::create('userlink', function (Blueprint $table) {
             $table->id();
-            $table->string('class');
-            $table->string('path')->nullable();
+            $table->integer('droids_id');
+            $table->integer('users_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateDroidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('droids');
+        Schema::dropIfExists('userlink');
     }
 }
