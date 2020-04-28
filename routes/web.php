@@ -22,15 +22,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-//Dashboard
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
-
-//User
-Route::post('/dashboard/{$user->id}', 'DroidController@add_users_droid');
-
 //Droids
-Route::get('/', 'DroidController@index');
-Route::get('/home', 'DroidController@droids_all');
-
-Route::get('all_list', 'DroidController@droids_all');
+Route::post('view', 'DroidsController@store');
+Route::get('view', 'DroidsController@index')->name('droids.index');

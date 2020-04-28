@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserBuild extends Model
+class Droid extends Model
 {
     //
 }
