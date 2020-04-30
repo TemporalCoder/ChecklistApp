@@ -19,6 +19,11 @@ class DroidsController extends Controller
         ]);
     }
 
+    public function my_droids()
+    {
+        return view ('droids.my_droids');
+    }
+
     public function store()
     {
 

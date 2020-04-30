@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\Request;
 
 class LoginController extends Controller
 {
@@ -37,7 +38,7 @@ class LoginController extends Controller
             return $this->redirectTo;
         }
 
-        $this->redirectTo = route('dashboard');
+        $this->redirectTo = route('home');
         return $this->redirectTo;
     }
 
@@ -50,4 +51,8 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+      }
 }
