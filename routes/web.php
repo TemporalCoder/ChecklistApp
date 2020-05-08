@@ -26,4 +26,4 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 //Droids
 Route::post('view', 'DroidsController@store');
 Route::get('view', 'DroidsController@index')->name('droids.index')->middleware('can:add-droids');
-Route::get('view', 'DroidsController@my_droids')->name('droids.my_droids');
+Route::get('my_droids', 'DroidsController@my_droids')->name('droids.my_droids');

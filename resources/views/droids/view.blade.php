@@ -23,9 +23,10 @@
             @foreach($droids as $droid)
                 <tr>
                     <td>{{ $droid->class }}</td>
+
+                    <td><a href="#" class="btn btn-success">Build This Droid</a></td>
                 </tr>
             @endforeach
-
         </tbody>
       </table>
 @endsection
