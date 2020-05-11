@@ -16,12 +16,17 @@ Auth::routes();
 
 //Home
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('logout', 'LoginController@logout');
+// Route::get('logout', 'LoginController@logout');
 
 //Admin
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
+
 });
+
+// Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
+//     Route::resource('/users', 'DroidsController');
+// });
 
 //Droids
 Route::post('view', 'DroidsController@store');

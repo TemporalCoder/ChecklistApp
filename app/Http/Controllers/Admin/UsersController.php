@@ -31,7 +31,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id, User $user)
     {
         if(Gate::denies('edit-users'))
         {
@@ -42,7 +42,6 @@ class UsersController extends Controller
         {
             return redirect(route('admin.users.index'));
         }
-
 
         $role = Role::all();
 
@@ -59,7 +58,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update($id, Request $request, User $user)
     {
         $user->roles()->sync($request->roles);
 
