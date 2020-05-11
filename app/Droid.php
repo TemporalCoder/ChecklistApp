@@ -8,9 +8,9 @@ class Droid extends Model
 {
     protected $guarded = [];
 
-    protected $table = 'roles';
+    protected $table = 'droids';
 
-    protected $fillable = [ 'name' ];
+    protected $fillable = [ 'class' ];
 
     public function users()
     {

@@ -24,9 +24,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
 });
 
-// Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
-//     Route::resource('/users', 'DroidsController');
-// });
+    /** @var Illuminate\Routing\Router $router */
+
+    $router->get( '/user/{id}/droids', ['as' => 'user.edit', 'uses' => 'UserController@edit' ] );
+    $router->post( '/user/{id}/droids', ['as' => 'user.update', 'uses' => 'UserController@update' ] );
 
 //Droids
 Route::post('view', 'DroidsController@store');

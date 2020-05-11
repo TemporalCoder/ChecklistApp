@@ -49,6 +49,14 @@ class UsersController extends Controller
             'user' => $user,
             'roles' => $role
         ]);
+
+
+        $user = Users::with('droids')->findOrFail( $id );
+
+        $droids = Droids::all();
+
+        return view( 'droids', compact( 'user', 'droids' ) );
+
     }
 
     /**
@@ -72,6 +80,14 @@ class UsersController extends Controller
             $request->session()->flash('error', 'There was an error updating the user.');
         }
         return redirect()->route('admin.users.index');
+
+        $droids = $request->get( 'droids', [] );
+
+        $user = User::findOrFail( $id );
+        $user->droids()->sync( $droids ); // this does the trick
+
+        return redirect()->back()->with( 'info', 'success' );
+
     }
 
     /**
