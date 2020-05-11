@@ -68,7 +68,7 @@
                                         Droid Management
                                     </a>
                                     @endcan
-                                    <a class="dropdown-item" href="{{ route('my_droids') }}">
+                                    <a class="dropdown-item" href="{{ route('droids.my_droids') }}">
                                         My Droids
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

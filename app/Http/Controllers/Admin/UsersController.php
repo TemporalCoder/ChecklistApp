@@ -31,7 +31,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id, User $user)
+    public function edit(User $user)
     {
         if(Gate::denies('edit-users'))
         {
@@ -51,11 +51,11 @@ class UsersController extends Controller
         ]);
 
 
-        $user = Users::with('droids')->findOrFail( $id );
+    //   $user = Users::with('droids')->findOrFail( $id );
 
-        $droids = Droids::all();
+    //     $droids = Droids::all();
 
-        return view( 'droids', compact( 'user', 'droids' ) );
+    //     return view( 'droids', compact( 'user', 'droids' ) );
 
     }
 
@@ -66,7 +66,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request, User $user)
+    public function update( Request $request, User $user)
     {
         $user->roles()->sync($request->roles);
 
