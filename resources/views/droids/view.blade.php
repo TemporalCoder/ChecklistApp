@@ -24,7 +24,7 @@
                 <tr>
                     <td>{{ $droid->class }}</td>
 
-                    <td><a href="{{ 'add_my_droid' }}" class="btn btn-success">Build This Droid</a></td>
+                    <td><a href="{{ 'droids.update' }}" class="btn btn-success">Build This Droid</a></td>
                 </tr>
             @endforeach
         </tbody>

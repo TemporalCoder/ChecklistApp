@@ -24,12 +24,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
 });
 
-    /** @var Illuminate\Routing\Router $router */
 
-    $router->get( '/user/{id}/droids', ['as' => 'user.edit', 'uses' => 'UserController@edit' ] );
-    $router->post( '/user/{id}/droids', ['as' => 'user.update', 'uses' => 'UserController@update' ] );
+Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
+    Route::resource('index', 'DroidsController');
+});
 
-//Droids
-Route::post('view', 'DroidsController@store');
-Route::get('view', 'DroidsController@index')->name('droids.index')->middleware('can:add-droids');
-Route::get('my_droids', 'DroidsController@my_droids')->name('droids.my_droids');
+// //Droids
+// Route::post('view', 'DroidsController@store');
+// Route::get('view', 'DroidsController@index')->name('droids.index')->middleware('can:add-droids');
+// Route::get('my_droids', 'DroidsController@my_droids')->name('droids.my_droids');
+// Route::post('droids_update', 'DroidsController@droids_update')->name('droids.update');
