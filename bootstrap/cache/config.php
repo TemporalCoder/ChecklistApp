@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'MrBaddeleyPrintedDroid',
+    'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost',
@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:Vri1owI700aksUexcdAgoieWzJSQBWUvTPZwXR5NxJ0=',
+    'key' => 'base64:kV8dPaJ69jOc13Uj4DU7GPnOnPlJKzSoVOYYGIIcb1w=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -135,7 +135,7 @@
         'app_id' => '',
         'options' => 
         array (
-          'cluster' => NULL,
+          'cluster' => 'mt1',
           'useTLS' => true,
         ),
       ),
@@ -177,7 +177,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\rober\\dbcl\\storage\\framework/cache/data',
+        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -209,14 +209,14 @@
       'dynamodb' => 
       array (
         'driver' => 'dynamodb',
-        'key' => NULL,
-        'secret' => NULL,
+        'key' => '',
+        'secret' => '',
         'region' => 'us-east-1',
         'table' => 'cache',
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'mrbaddeleyprinteddroid_cache',
+    'prefix' => 'laravel_cache',
   ),
   'cors' => 
   array (
@@ -247,14 +247,14 @@
   ),
   'database' => 
   array (
-    'default' => 'sqlite',
+    'default' => 'mysql',
     'connections' => 
     array (
       'sqlite' => 
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'C:\\Users\\rober\\dbcl\\database\\database.sqlite',
+        'database' => 'checklistapp',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -264,9 +264,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'forge',
-        'username' => 'forge',
-        'password' => '',
+        'database' => 'checklistapp',
+        'username' => 'root',
+        'password' => 'root',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -283,10 +283,10 @@
         'driver' => 'pgsql',
         'url' => NULL,
         'host' => '127.0.0.1',
-        'port' => '5432',
-        'database' => 'forge',
-        'username' => 'forge',
-        'password' => '',
+        'port' => '3306',
+        'database' => 'checklistapp',
+        'username' => 'root',
+        'password' => 'root',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -297,11 +297,11 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '1433',
-        'database' => 'forge',
-        'username' => 'forge',
-        'password' => '',
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'checklistapp',
+        'username' => 'root',
+        'password' => 'root',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -314,7 +314,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'mrbaddeleyprinteddroid_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
@@ -343,29 +343,29 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\rober\\dbcl\\storage\\app',
+        'root' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\rober\\dbcl\\storage\\app/public',
+        'root' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
       's3' => 
       array (
         'driver' => 's3',
-        'key' => NULL,
-        'secret' => NULL,
-        'region' => NULL,
-        'bucket' => NULL,
+        'key' => '',
+        'secret' => '',
+        'region' => 'us-east-1',
+        'bucket' => '',
         'url' => NULL,
         'endpoint' => NULL,
       ),
     ),
     'links' => 
     array (
-      'C:\\Users\\rober\\dbcl\\public\\storage' => 'C:\\Users\\rober\\dbcl\\storage\\app/public',
+      '/home/miyamoto/Documents/LAMP/ChecklistApp/public/storage' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -399,13 +399,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\rober\\dbcl\\storage\\logs/laravel.log',
+        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\rober\\dbcl\\storage\\logs/laravel.log',
+        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -455,7 +455,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\rober\\dbcl\\storage\\logs/laravel.log',
+        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -503,15 +503,15 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
-      'name' => 'Example',
+      'address' => NULL,
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\rober\\dbcl\\resources\\views/vendor/mail',
+        0 => '/home/miyamoto/Documents/LAMP/ChecklistApp/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -542,8 +542,8 @@
       'sqs' => 
       array (
         'driver' => 'sqs',
-        'key' => NULL,
-        'secret' => NULL,
+        'key' => '',
+        'secret' => '',
         'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
         'queue' => 'your-queue-name',
         'suffix' => NULL,
@@ -561,7 +561,7 @@
     'failed' => 
     array (
       'driver' => 'database',
-      'database' => 'sqlite',
+      'database' => 'mysql',
       'table' => 'failed_jobs',
     ),
   ),
@@ -579,18 +579,18 @@
     ),
     'ses' => 
     array (
-      'key' => NULL,
-      'secret' => NULL,
+      'key' => '',
+      'secret' => '',
       'region' => 'us-east-1',
     ),
   ),
   'session' => 
   array (
     'driver' => 'file',
-    'lifetime' => 120,
+    'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\rober\\dbcl\\storage\\framework/sessions',
+    'files' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -599,7 +599,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'mrbaddeleyprinteddroid_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -610,9 +610,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\rober\\dbcl\\resources\\views',
+      0 => '/home/miyamoto/Documents/LAMP/ChecklistApp/resources/views',
     ),
-    'compiled' => 'C:\\Users\\rober\\dbcl\\storage\\framework\\views',
+    'compiled' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/views',
   ),
   'flare' => 
   array (

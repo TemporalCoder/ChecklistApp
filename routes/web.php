@@ -26,7 +26,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
 
 Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
-    Route::resource('index', 'DroidsController');
+    Route::resource('/index', 'DroidsController');
 });
 
 // //Droids

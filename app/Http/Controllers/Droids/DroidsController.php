@@ -17,11 +17,7 @@ class DroidsController extends Controller
      */
     public function index()
     {
-        $droids = Droid::all();
-
-        return view('droids.view', [
-            'droids' => $droids,
-        ]);
+        return view('droids.my_droids');
     }
 
     /**
@@ -29,9 +25,14 @@ class DroidsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
-        //
+        $droids = Droid::all();
+
+        return view('droids.view', [
+            'droids' => $droids,
+        ]);
     }
 
     /**
@@ -53,7 +54,7 @@ class DroidsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
