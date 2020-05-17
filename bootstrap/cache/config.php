@@ -1,5 +1,5 @@
 <?php return array (
-  'app' => 
+  'app' =>
   array (
     'name' => 'Laravel',
     'env' => 'local',
@@ -12,7 +12,7 @@
     'faker_locale' => 'en_US',
     'key' => 'base64:kV8dPaJ69jOc13Uj4DU7GPnOnPlJKzSoVOYYGIIcb1w=',
     'cipher' => 'AES-256-CBC',
-    'providers' => 
+    'providers' =>
     array (
       0 => 'Illuminate\\Auth\\AuthServiceProvider',
       1 => 'Illuminate\\Broadcasting\\BroadcastServiceProvider',
@@ -41,7 +41,7 @@
       24 => 'App\\Providers\\EventServiceProvider',
       25 => 'App\\Providers\\RouteServiceProvider',
     ),
-    'aliases' => 
+    'aliases' =>
     array (
       'App' => 'Illuminate\\Support\\Facades\\App',
       'Arr' => 'Illuminate\\Support\\Arr',
@@ -81,38 +81,38 @@
       'View' => 'Illuminate\\Support\\Facades\\View',
     ),
   ),
-  'auth' => 
+  'auth' =>
   array (
-    'defaults' => 
+    'defaults' =>
     array (
       'guard' => 'web',
       'passwords' => 'users',
     ),
-    'guards' => 
+    'guards' =>
     array (
-      'web' => 
+      'web' =>
       array (
         'driver' => 'session',
         'provider' => 'users',
       ),
-      'api' => 
+      'api' =>
       array (
         'driver' => 'token',
         'provider' => 'users',
         'hash' => false,
       ),
     ),
-    'providers' => 
+    'providers' =>
     array (
-      'users' => 
+      'users' =>
       array (
         'driver' => 'eloquent',
         'model' => 'App\\User',
       ),
     ),
-    'passwords' => 
+    'passwords' =>
     array (
-      'users' => 
+      'users' =>
       array (
         'provider' => 'users',
         'table' => 'password_resets',
@@ -122,78 +122,78 @@
     ),
     'password_timeout' => 10800,
   ),
-  'broadcasting' => 
+  'broadcasting' =>
   array (
     'default' => 'log',
-    'connections' => 
+    'connections' =>
     array (
-      'pusher' => 
+      'pusher' =>
       array (
         'driver' => 'pusher',
         'key' => '',
         'secret' => '',
         'app_id' => '',
-        'options' => 
+        'options' =>
         array (
           'cluster' => 'mt1',
           'useTLS' => true,
         ),
       ),
-      'redis' => 
+      'redis' =>
       array (
         'driver' => 'redis',
         'connection' => 'default',
       ),
-      'log' => 
+      'log' =>
       array (
         'driver' => 'log',
       ),
-      'null' => 
+      'null' =>
       array (
         'driver' => 'null',
       ),
     ),
   ),
-  'cache' => 
+  'cache' =>
   array (
     'default' => 'file',
-    'stores' => 
+    'stores' =>
     array (
-      'apc' => 
+      'apc' =>
       array (
         'driver' => 'apc',
       ),
-      'array' => 
+      'array' =>
       array (
         'driver' => 'array',
         'serialize' => false,
       ),
-      'database' => 
+      'database' =>
       array (
         'driver' => 'database',
         'table' => 'cache',
         'connection' => NULL,
       ),
-      'file' => 
+      'file' =>
       array (
         'driver' => 'file',
-        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/cache/data',
+        'path' => 'C:\\Users\\rober\\ChecklistApp\\storage\\framework/cache/data',
       ),
-      'memcached' => 
+      'memcached' =>
       array (
         'driver' => 'memcached',
         'persistent_id' => NULL,
-        'sasl' => 
+        'sasl' =>
         array (
           0 => NULL,
           1 => NULL,
         ),
-        'options' => 
+        'options' =>
         array (
         ),
-        'servers' => 
+        'servers' =>
         array (
-          0 => 
+          0 =>
           array (
             'host' => '127.0.0.1',
             'port' => 11211,
@@ -201,12 +201,12 @@
           ),
         ),
       ),
-      'redis' => 
+      'redis' =>
       array (
         'driver' => 'redis',
         'connection' => 'cache',
       ),
-      'dynamodb' => 
+      'dynamodb' =>
       array (
         'driver' => 'dynamodb',
         'key' => '',
@@ -218,39 +218,39 @@
     ),
     'prefix' => 'laravel_cache',
   ),
-  'cors' => 
+  'cors' =>
   array (
-    'paths' => 
+    'paths' =>
     array (
       0 => 'api/*',
     ),
-    'allowed_methods' => 
+    'allowed_methods' =>
     array (
       0 => '*',
     ),
-    'allowed_origins' => 
+    'allowed_origins' =>
     array (
       0 => '*',
     ),
-    'allowed_origins_patterns' => 
+    'allowed_origins_patterns' =>
     array (
     ),
-    'allowed_headers' => 
+    'allowed_headers' =>
     array (
       0 => '*',
     ),
-    'exposed_headers' => 
+    'exposed_headers' =>
     array (
     ),
     'max_age' => 0,
     'supports_credentials' => false,
   ),
-  'database' => 
+  'database' =>
   array (
     'default' => 'mysql',
-    'connections' => 
+    'connections' =>
     array (
-      'sqlite' => 
+      'sqlite' =>
       array (
         'driver' => 'sqlite',
         'url' => NULL,
@@ -258,7 +258,7 @@
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
-      'mysql' => 
+      'mysql' =>
       array (
         'driver' => 'mysql',
         'url' => NULL,
@@ -274,11 +274,11 @@
         'prefix_indexes' => true,
         'strict' => true,
         'engine' => NULL,
-        'options' => 
+        'options' =>
         array (
         ),
       ),
-      'pgsql' => 
+      'pgsql' =>
       array (
         'driver' => 'pgsql',
         'url' => NULL,
@@ -293,7 +293,7 @@
         'schema' => 'public',
         'sslmode' => 'prefer',
       ),
-      'sqlsrv' => 
+      'sqlsrv' =>
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
@@ -308,15 +308,15 @@
       ),
     ),
     'migrations' => 'migrations',
-    'redis' => 
+    'redis' =>
     array (
       'client' => 'phpredis',
-      'options' => 
+      'options' =>
       array (
         'cluster' => 'redis',
         'prefix' => 'laravel_database_',
       ),
-      'default' => 
+      'default' =>
       array (
         'url' => NULL,
         'host' => '127.0.0.1',
@@ -324,7 +324,7 @@
         'port' => '6379',
         'database' => '0',
       ),
-      'cache' => 
+      'cache' =>
       array (
         'url' => NULL,
         'host' => '127.0.0.1',
@@ -334,25 +334,25 @@
       ),
     ),
   ),
-  'filesystems' => 
+  'filesystems' =>
   array (
     'default' => 'local',
     'cloud' => 's3',
-    'disks' => 
+    'disks' =>
     array (
-      'local' => 
+      'local' =>
       array (
         'driver' => 'local',
-        'root' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app',
+        'root' => 'C:\\Users\\rober\\ChecklistApp/storage/app',
       ),
-      'public' => 
+      'public' =>
       array (
         'driver' => 'local',
-        'root' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app/public',
+        'root' => 'C:\\Users\\rober\\ChecklistApp/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
-      's3' => 
+      's3' =>
       array (
         'driver' => 's3',
         'key' => '',
@@ -363,53 +363,53 @@
         'endpoint' => NULL,
       ),
     ),
-    'links' => 
+    'links' =>
     array (
-      '/home/miyamoto/Documents/LAMP/ChecklistApp/public/storage' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/app/public',
+      'C:\\Users\\rober\\ChecklistApp/public/storage' => 'C:\\Users\\rober\\LAMP/ChecklistApp/storage/app/public',
     ),
   ),
-  'hashing' => 
+  'hashing' =>
   array (
     'driver' => 'bcrypt',
-    'bcrypt' => 
+    'bcrypt' =>
     array (
       'rounds' => 10,
     ),
-    'argon' => 
+    'argon' =>
     array (
       'memory' => 1024,
       'threads' => 2,
       'time' => 2,
     ),
   ),
-  'logging' => 
+  'logging' =>
   array (
     'default' => 'stack',
-    'channels' => 
+    'channels' =>
     array (
-      'stack' => 
+      'stack' =>
       array (
         'driver' => 'stack',
-        'channels' => 
+        'channels' =>
         array (
           0 => 'single',
         ),
         'ignore_exceptions' => false,
       ),
-      'single' => 
+      'single' =>
       array (
         'driver' => 'single',
-        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\rober\\ChecklistApp/storage/logs/laravel.log',
         'level' => 'debug',
       ),
-      'daily' => 
+      'daily' =>
       array (
         'driver' => 'daily',
-        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\rober\\ChecklistApp/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
-      'slack' => 
+      'slack' =>
       array (
         'driver' => 'slack',
         'url' => NULL,
@@ -417,54 +417,54 @@
         'emoji' => ':boom:',
         'level' => 'critical',
       ),
-      'papertrail' => 
+      'papertrail' =>
       array (
         'driver' => 'monolog',
         'level' => 'debug',
         'handler' => 'Monolog\\Handler\\SyslogUdpHandler',
-        'handler_with' => 
+        'handler_with' =>
         array (
           'host' => NULL,
           'port' => NULL,
         ),
       ),
-      'stderr' => 
+      'stderr' =>
       array (
         'driver' => 'monolog',
         'handler' => 'Monolog\\Handler\\StreamHandler',
         'formatter' => NULL,
-        'with' => 
+        'with' =>
         array (
           'stream' => 'php://stderr',
         ),
       ),
-      'syslog' => 
+      'syslog' =>
       array (
         'driver' => 'syslog',
         'level' => 'debug',
       ),
-      'errorlog' => 
+      'errorlog' =>
       array (
         'driver' => 'errorlog',
         'level' => 'debug',
       ),
-      'null' => 
+      'null' =>
       array (
         'driver' => 'monolog',
         'handler' => 'Monolog\\Handler\\NullHandler',
       ),
-      'emergency' => 
+      'emergency' =>
       array (
-        'path' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/logs/laravel.log',
+        'path' => 'C:\\Users\\rober\\ChecklistApp/storage/logs/laravel.log',
       ),
     ),
   ),
-  'mail' => 
+  'mail' =>
   array (
     'default' => 'smtp',
-    'mailers' => 
+    'mailers' =>
     array (
-      'smtp' => 
+      'smtp' =>
       array (
         'transport' => 'smtp',
         'host' => 'smtp.mailtrap.io',
@@ -474,64 +474,64 @@
         'password' => NULL,
         'timeout' => NULL,
       ),
-      'ses' => 
+      'ses' =>
       array (
         'transport' => 'ses',
       ),
-      'mailgun' => 
+      'mailgun' =>
       array (
         'transport' => 'mailgun',
       ),
-      'postmark' => 
+      'postmark' =>
       array (
         'transport' => 'postmark',
       ),
-      'sendmail' => 
+      'sendmail' =>
       array (
         'transport' => 'sendmail',
         'path' => '/usr/sbin/sendmail -bs',
       ),
-      'log' => 
+      'log' =>
       array (
         'transport' => 'log',
         'channel' => NULL,
       ),
-      'array' => 
+      'array' =>
       array (
         'transport' => 'array',
       ),
     ),
-    'from' => 
+    'from' =>
     array (
       'address' => NULL,
       'name' => 'Laravel',
     ),
-    'markdown' => 
+    'markdown' =>
     array (
       'theme' => 'default',
-      'paths' => 
+      'paths' =>
       array (
-        0 => '/home/miyamoto/Documents/LAMP/ChecklistApp/resources/views/vendor/mail',
+        0 => 'C:\\Users\\rober\\ChecklistApp/resources/views/vendor/mail',
       ),
     ),
   ),
-  'queue' => 
+  'queue' =>
   array (
     'default' => 'sync',
-    'connections' => 
+    'connections' =>
     array (
-      'sync' => 
+      'sync' =>
       array (
         'driver' => 'sync',
       ),
-      'database' => 
+      'database' =>
       array (
         'driver' => 'database',
         'table' => 'jobs',
         'queue' => 'default',
         'retry_after' => 90,
       ),
-      'beanstalkd' => 
+      'beanstalkd' =>
       array (
         'driver' => 'beanstalkd',
         'host' => 'localhost',
@@ -539,7 +539,7 @@
         'retry_after' => 90,
         'block_for' => 0,
       ),
-      'sqs' => 
+      'sqs' =>
       array (
         'driver' => 'sqs',
         'key' => '',
@@ -549,7 +549,7 @@
         'suffix' => NULL,
         'region' => 'us-east-1',
       ),
-      'redis' => 
+      'redis' =>
       array (
         'driver' => 'redis',
         'connection' => 'default',
@@ -558,43 +558,43 @@
         'block_for' => NULL,
       ),
     ),
-    'failed' => 
+    'failed' =>
     array (
       'driver' => 'database',
       'database' => 'mysql',
       'table' => 'failed_jobs',
     ),
   ),
-  'services' => 
+  'services' =>
   array (
-    'mailgun' => 
+    'mailgun' =>
     array (
       'domain' => NULL,
       'secret' => NULL,
       'endpoint' => 'api.mailgun.net',
     ),
-    'postmark' => 
+    'postmark' =>
     array (
       'token' => NULL,
     ),
-    'ses' => 
+    'ses' =>
     array (
       'key' => '',
       'secret' => '',
       'region' => 'us-east-1',
     ),
   ),
-  'session' => 
+  'session' =>
   array (
     'driver' => 'file',
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/sessions',
+    'files' => 'C:\\Users\\rober\\ChecklistApp/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
-    'lottery' => 
+    'lottery' =>
     array (
       0 => 2,
       1 => 100,
@@ -606,18 +606,18 @@
     'http_only' => true,
     'same_site' => 'lax',
   ),
-  'view' => 
+  'view' =>
   array (
-    'paths' => 
+    'paths' =>
     array (
-      0 => '/home/miyamoto/Documents/LAMP/ChecklistApp/resources/views',
+      0 => 'C:\\Users\\rober\\ChecklistApp/resources/views',
     ),
-    'compiled' => '/home/miyamoto/Documents/LAMP/ChecklistApp/storage/framework/views',
+    'compiled' => 'C:\\Users\\rober\\ChecklistApp/storage/framework/views',
   ),
-  'flare' => 
+  'flare' =>
   array (
     'key' => NULL,
-    'reporting' => 
+    'reporting' =>
     array (
       'anonymize_ips' => true,
       'collect_git_information' => false,
@@ -629,13 +629,13 @@
     ),
     'send_logs_as_events' => true,
   ),
-  'ignition' => 
+  'ignition' =>
   array (
     'editor' => 'phpstorm',
     'theme' => 'light',
     'enable_share_button' => true,
     'register_commands' => false,
-    'ignored_solution_providers' => 
+    'ignored_solution_providers' =>
     array (
       0 => 'Facade\\Ignition\\SolutionProviders\\MissingPackageSolutionProvider',
     ),
@@ -644,20 +644,20 @@
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
   ),
-  'trustedproxy' => 
+  'trustedproxy' =>
   array (
     'proxies' => NULL,
     'headers' => 30,
   ),
-  'tinker' => 
+  'tinker' =>
   array (
-    'commands' => 
+    'commands' =>
     array (
     ),
-    'alias' => 
+    'alias' =>
     array (
     ),
-    'dont_alias' => 
+    'dont_alias' =>
     array (
       0 => 'App\\Nova',
     ),
