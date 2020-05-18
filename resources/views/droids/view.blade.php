@@ -22,9 +22,9 @@
         <tbody>
             @foreach($droids as $droid)
                 <tr>
-                    <td>{{ $droid->class }}</td>
+                    <td><button name="buildDroid" class="btn btn-success" value="{{ $droid->id }}">{{ $droid->class }}</button></td>
 
-                    <td><a href="{{ 'droids.update' }}" class="btn btn-success">Build This Droid</a></td>
+                    <td><button type="submit" class="btn btn-success">Build This Droid</button></td>
                 </tr>
             @endforeach
         </tbody>

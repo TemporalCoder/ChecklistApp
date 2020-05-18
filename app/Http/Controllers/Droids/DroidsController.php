@@ -8,6 +8,7 @@ use App\Droid;
 use App\Role;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DroidsController extends Controller
 {
@@ -18,7 +19,11 @@ class DroidsController extends Controller
      */
     public function index()
     {
-        return view('droids.my_droids');
+        $my_droids = DB::table('droid_user')
+        ->join('droids', 'droid_id', '=', 'droids.id')
+        ->get();
+
+        return view('droids.my_droids', ['my_droids' => $my_droids]);
     }
 
     /**
