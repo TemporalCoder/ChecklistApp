@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Droids;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Droid;
 use App\Role;
 use Gate;
 use Illuminate\Http\Request;
@@ -54,7 +55,7 @@ class DroidsController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**

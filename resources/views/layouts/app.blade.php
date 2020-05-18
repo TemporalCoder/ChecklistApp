@@ -64,7 +64,7 @@
                                     </a>
                                     @endcan
                                     @can('add-droids')
-                                    <a class="dropdown-item" href="{{ route('droids.index') }}">
+                                    <a class="dropdown-item" href="{{ route('droids.index.create') }}">
                                         Droid Management
                                     </a>
                                     @endcan

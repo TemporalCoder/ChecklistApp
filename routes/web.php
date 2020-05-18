@@ -21,16 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Admin
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-
 });
 
-
+//Droids
 Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
     Route::resource('/index', 'DroidsController');
 });
-
-// //Droids
-// Route::post('view', 'DroidsController@store');
-// Route::get('view', 'DroidsController@index')->name('droids.index')->middleware('can:add-droids');
-// Route::get('my_droids', 'DroidsController@my_droids')->name('droids.my_droids');
-// Route::post('droids_update', 'DroidsController@droids_update')->name('droids.update');
