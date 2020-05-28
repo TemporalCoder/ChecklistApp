@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Droids;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Droid;
+use App\DroidUser;
 use App\Role;
 use Gate;
 use Illuminate\Http\Request;
@@ -49,7 +50,14 @@ class DroidsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newDroidBuild = $request->input('droidIdentification');
+        $newBuild = new DroidUser();
+        $newBuild->user_id=auth()->user()->id;
+        $newBuild->droid_id=$newDroidBuild;
+        $newBuild->save();
+        // dd($newBuild);
+
+        return view('home');
     }
 
     /**
@@ -60,7 +68,7 @@ class DroidsController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**

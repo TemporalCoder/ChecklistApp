@@ -10,7 +10,10 @@ class Droid extends Model
 
     protected $table = 'droids';
 
-    protected $fillable = [ 'class' ];
+    protected $fillable = [
+        'id',
+        'class',
+    ];
 
     public function users()
     {

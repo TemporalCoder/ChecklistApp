@@ -13,9 +13,6 @@
         <li>{{ $my_droid->class }}</li>
         @endforeach
     </ul>
-
-    <p>
-        <button type="submit">Save</button>
-    </p>
 </form>
 @endsection
+

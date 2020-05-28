@@ -26,4 +26,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 //Droids
 Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
     Route::resource('/index', 'DroidsController');
+    Route::post('store', 'DroidsController@store');
 });

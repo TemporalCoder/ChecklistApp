@@ -12,6 +12,9 @@
     </form>
 @endcan
 <h1>View Droids</h1>
+@foreach($droids as $droid)
+<form action="{{ route('droids.index.store') }}" method="POST">
+    @csrf
       <table class="table text-center">
         <thead class="thead-light">
           <tr>
@@ -20,13 +23,12 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($droids as $droid)
-                <tr>
-                    <td><button name="buildDroid" class="btn btn-success" value="{{ $droid->id }}">{{ $droid->class }}</button></td>
-
-                    <td><button type="submit" class="btn btn-success">Build This Droid</button></td>
-                </tr>
-            @endforeach
+            <tr>
+                <td>{{ $droid->class }}</td>
+                <td><button type="submit" class="btn btn-success" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button></td>
+            </tr>
+@endforeach
         </tbody>
       </table>
+    </form>
 @endsection
