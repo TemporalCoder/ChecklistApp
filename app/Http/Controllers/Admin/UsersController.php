@@ -49,14 +49,6 @@ class UsersController extends Controller
             'user' => $user,
             'roles' => $role
         ]);
-
-
-    //   $user = Users::with('droids')->findOrFail( $id );
-
-    //     $droids = Droids::all();
-
-    //     return view( 'droids', compact( 'user', 'droids' ) );
-
     }
 
     /**

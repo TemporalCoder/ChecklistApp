@@ -70,71 +70,25 @@
         </style>
     </head>
     <body>
-        <header>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('{{ asset('img/MrB1.png') }}')">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-                <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('img/checklist.png') }}')">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('img/dome.png') }}')">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-            </div>
-          </header>
-          <!-- Page Content -->
-            <section class="py-5">
-                <div class="container">
-                <h1 class="display-4">MrBaddeley Printed Droids Checklist</h1>
-                <p class="lead">
-                    You can now keep track of your droids, your parts and every aspect of your build with the new Droid Checklist. Add one of Michael's droids
-                    that you are printing, select your version and tick off each part aftr you print them
-                </p>
-                <hr>
-                <img src="{{ asset('img/MBCL.png') }}" class="img-fluid">
-                <hr>
-                </div>
-            </section>
-        {{-- <div class="flex-center position-ref full-height">
+
+        <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    MrBaddeley Printed Droids
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="https://laravel.com/docs">Facebook</a>
+                    <a href="https://laracasts.com">Patreon</a>
+                    <a href="https://laravel-news.com">YouTube</a>
+                    <a href="https://blog.laravel.com">Forum</a>
+                    {{-- <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                 </div>
             </div>
-        </div> --}}
+        </div>
     </body>
 </html>
 @endsection

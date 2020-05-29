@@ -23,8 +23,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-//Droids
+//Droids General
 Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
     Route::resource('/index', 'DroidsController');
     Route::post('store', 'DroidsController@store');
+});
+
+//Droids User
+Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
+    //
 });

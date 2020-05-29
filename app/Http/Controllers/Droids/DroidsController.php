@@ -102,6 +102,7 @@ class DroidsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $my_droid->id->destroy();
+        return redirect()->route('droids.index.index');
     }
 }

@@ -1,18 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Add New Droid</h1>
-@can('add-droids')
-    <form action="view" method="POST" class="pb-5">
-        <div class="input-group">
-            <input type="text" name="class">
-        </div>
-        <button type="submit" class="btn btn-success">Add Droid</button>
-        @csrf
-    </form>
-@endcan
 <h1>View Droids</h1>
-@foreach($droids as $droid)
 <form action="{{ route('droids.index.store') }}" method="POST">
     @csrf
       <table class="table text-center">
@@ -23,11 +12,12 @@
           </tr>
         </thead>
         <tbody>
+            @foreach($droids as $droid)
             <tr>
                 <td>{{ $droid->class }}</td>
                 <td><button type="submit" class="btn btn-success" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button></td>
             </tr>
-@endforeach
+            @endforeach
         </tbody>
       </table>
     </form>
