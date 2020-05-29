@@ -54,7 +54,7 @@
                             </li>
                             <li class="nav-item">
                                 @can('add-droids')
-                                <a class="nav-link" href="{{ route('droids.index.create') }}">
+                                <a class="nav-link" href="{{ route('droids.index.index') }}">
                                     Droid Management
                                 </a>
                                 @endcan
@@ -71,7 +71,7 @@
                                     </a>
                                     @endcan
 
-                                    <a class="dropdown-item" href="{{ route('droids.index.index') }}">
+                                    <a class="dropdown-item" href="{{ route('droids.user.index') }}">
                                         My Droids
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

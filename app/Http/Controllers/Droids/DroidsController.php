@@ -20,11 +20,10 @@ class DroidsController extends Controller
      */
     public function index()
     {
-        $my_droids = DB::table('droid_user')
-        ->join('droids', 'droid_id', '=', 'droids.id')
-        ->get();
-
-        return view('droids.my_droids', ['my_droids' => $my_droids]);
+        $droids = Droid::all();
+        return view('droids.index', [
+           'droids' => $droids,
+        ]);
     }
 
     /**
@@ -35,11 +34,7 @@ class DroidsController extends Controller
 
     public function create()
     {
-        $droids = Droid::all();
-
-        return view('droids.view', [
-            'droids' => $droids,
-        ]);
+        //
     }
 
     /**
@@ -102,7 +97,6 @@ class DroidsController extends Controller
      */
     public function destroy($id)
     {
-        $my_droid->id->destroy();
-        return redirect()->route('droids.index.index');
+        //
     }
 }

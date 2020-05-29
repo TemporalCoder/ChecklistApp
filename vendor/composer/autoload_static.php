@@ -477,6 +477,7 @@ class ComposerStaticInita54d73e4933c743f29e6ddf4767bd665
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DroidsUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Droids/DroidsUsersController.php',
         'App\\Http\\Controllers\\Droids\\DroidsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Droids/DroidsController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\TasksController' => __DIR__ . '/../..' . '/app/Http/Controllers/TasksController.php',
