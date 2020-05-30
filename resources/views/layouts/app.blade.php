@@ -71,7 +71,7 @@
                                     </a>
                                     @endcan
 
-                                    <a class="dropdown-item" href="{{ route('droids.user.index') }}">
+                                    <a class="dropdown-item" href="{{ route('droid.user.index') }}">
                                         My Droids
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

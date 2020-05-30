@@ -34,7 +34,7 @@ class DroidsController extends Controller
 
     public function create()
     {
-        //
+        return view('droids.add');
     }
 
     /**
@@ -52,7 +52,7 @@ class DroidsController extends Controller
         $newBuild->save();
         // dd($newBuild);
 
-        return view('home');
+        return view('droids.user.index');
     }
 
     /**

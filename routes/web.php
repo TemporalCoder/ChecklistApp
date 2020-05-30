@@ -26,10 +26,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 //Droids General
 Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
     Route::resource('/index', 'DroidsController');
-    Route::post('store', 'DroidsController@store');
 });
 
 //Droids User
-Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
+Route::namespace('Droids')->prefix('droids')->name('droid.')->group(function(){
     Route::resource('/user', 'DroidsUsersController');
+    Route::post('store', 'DroidsUsersController@store');
+
 });
