@@ -13,8 +13,8 @@
         </div>
     @endif
 
-    <form action="{{ route('droids.index.create') }}" method="POST" encrypt="multipart/form-data">
-        @csrf
+    <form action="{{ route('droids.index.store', ['droids' => $droids]) }}" method="POST" encrypt="multipart/form-data">
+        @method('PATCH')
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">

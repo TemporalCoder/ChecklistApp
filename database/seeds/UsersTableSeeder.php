@@ -37,9 +37,15 @@ class UsersTableSeeder extends Seeder
             'email' => 'user@user.com',
             'password' => Hash::make('Skywalker94'),
         ]);
+        $rob = User::create([
+            'name' => 'Rob',
+            'email' => 'robhowdle94@gmail.com',
+            'password' => Hash::make('Skywalker94'),
+        ]);
 
         $admin->roles()->attach($adminRole);
         $designer->roles()->attach($designerRole);
         $user->roles()->attach($userRole);
+        $rob->roles()->attach($adminRole);
     }
 }

@@ -45,14 +45,7 @@ class DroidsController extends Controller
      */
     public function store(Request $request)
     {
-        // $newDroidBuild = $request->input('droidIdentification');
-        // $newBuild = new DroidUser();
-        // $newBuild->user_id=auth()->user()->id;
-        // $newBuild->droid_id=$newDroidBuild;
-        // $newBuild->save();
-        // // dd($newBuild);
-
-        // return view('droids.user.index');
+        echo "test";
     }
 
     /**
