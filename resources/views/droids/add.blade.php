@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<h3>Add Droid</h3>
+<h3 class="text-center">Add New Droid</h3>
 @if ($message = Session::get('success'))
 <div class="alert alert-success alert-block">
     <button type="button" class="close" data-dismiss="alert">×</button>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success">Add Product</button>
+                <button type="submit" class="btn btn-success">Add Droid</button>
             </div>
         </div>
     </form>
