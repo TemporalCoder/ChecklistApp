@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\DB;
 
 class DroidsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -45,7 +49,18 @@ class DroidsController extends Controller
      */
     public function store(Request $request)
     {
-        echo "test";
+
+        $newClass = new Droid;
+        $newClass['class'] = $request->class;
+
+
+        //Image Upload
+        $droidImage = auth()->user()->droids()->create($request->all());
+        if ($request->has('img'))
+        {
+            $droidImage->update(['img' => $request->file('img')->store('images','public')]);
+        }
+        return back()->withMessage('Image Uploaded');
     }
 
     /**

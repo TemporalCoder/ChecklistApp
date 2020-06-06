@@ -2,32 +2,38 @@
 @section('content')
 
 <h3>Add Droid</h3>
-@if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+</div>
+<img src="images/{{ Session::get('image') }}">
+@endif
 
-    <form action="{{ route('droids.index.store', ['droids' => $droids]) }}" method="POST" encrypt="multipart/form-data">
-        @method('PATCH')
+@if (count($errors) > 0)
+<div class="alert alert-danger">
+    <strong>Whoops!</strong> There were some problems with your input.
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+    <form action="{{ route('droids.index.store') }}" method="POST" encrypt="multipart/form-data">
+        @csrf
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="class">Droid Class</label>
-                    <input type="text" name="class" class="form-control">
-                    <div>{{ $errors->first('class') }}</div>
+                    <input type="text" class="form-control" name="class">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group d-flex flex-column">
                     <label for="image">Droid Image</label>
-                    <input type="file" name="image" class="form-control">
-                    <div>{{ $errors->first('image') }}</div>
+                    <input type="file" class="form-control" name="image">
                 </div>
             </div>
             <div class="col-md-12">
