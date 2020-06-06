@@ -29,6 +29,12 @@
                 </div>
             </div>
             <div class="col-md-12">
+                <div class="form-group">
+                    <label for="class">Droid Description</label>
+                    <input type="text" class="form-control" name="description">
+                </div>
+            </div>
+            <div class="col-md-12">
                 <div class="form-group d-flex flex-column">
                         <input type="file" name="file" class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }}" >
                         @if ($errors->has('file'))

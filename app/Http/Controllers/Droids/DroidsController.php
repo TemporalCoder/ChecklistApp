@@ -50,11 +50,19 @@ class DroidsController extends Controller
     public function store(Request $request)
     {
 
+        $destinationPath = 'storage\app\images/';
+
         $newClass = new Droid;
         $newClass['class'] = $request->class;
+        $newClass['description'] = $request->description;
+        $newClass['path'] = $request->file('file')->store('images');
+
+
+        // dd($newClass);
+
         $newClass->save();
 
-        echo $request->file('file')->store('images');
+
 
 
 
@@ -113,3 +121,4 @@ class DroidsController extends Controller
         //
     }
 }
+
