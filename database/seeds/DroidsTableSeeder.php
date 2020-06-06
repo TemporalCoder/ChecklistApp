@@ -25,35 +25,43 @@ class DroidsTableSeeder extends Seeder
 
         $r2 = Droid::create([
             'class' => 'R2',
+            'description' => 'Full Droid',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20161108040914',
         ]);
 
         $r4 = Droid::create([
             'class' => 'R4',
+            'description' => 'Dome Only',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/d/dd/R4_negtd.jpg/revision/latest?cb=20100810061713',
         ]);
         $r5 = Droid::create([
             'class' => 'R5',
+            'description' => 'Dome Only',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/c/cb/R5-D4_Sideshow.png/revision/latest?cb=20160809033145',
         ]);
         $r6 = Droid::create([
             'class' => 'R6',
+            'description' => 'Dome Only',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/9/95/R6-LE5-SWTROS-VD.jpg/revision/latest?cb=20191229213055',
         ]);
         $r7 = Droid::create([
             'class' => 'R7',
+            'description' => 'Full Droid',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/4/4f/R7-F5.jpg/revision/latest/top-crop/width/360/height/450?cb=20090310054647',
         ]);
         $r9 = Droid::create([
             'class' => 'R9',
+            'description' => 'Dome Only',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/8/85/R9Pic.jpg/revision/latest/top-crop/width/360/height/450?cb=20091223205649',
         ]);
         $bd1 = Droid::create([
             'class' => 'BD-1',
+            'description' => 'Full Droid',
             'path' =>   'https://vignette.wikia.nocookie.net/starwars/images/e/e7/BD-1_AG.png/revision/latest?cb=20200406023031',
         ]);
         $chopper = Droid::create([
             'class' => 'Chopper',
+            'description' => 'WIP',
             'path' => 'https://vignette.wikia.nocookie.net/starwars/images/e/e5/Chopper2-Fathead.png/revision/latest?cb=20161108054908',
         ]);
 
