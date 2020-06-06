@@ -2,12 +2,10 @@
 @section('content')
 
 <h3 class="text-center">Add New Droid</h3>
-@if ($message = Session::get('success'))
-<div class="alert alert-success alert-block">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
+@if(session()->has('success'))
+<div class="alert alert-success">
+    {{ session()->get('success') }}
 </div>
-<img src="images/{{ Session::get('image') }}">
 @endif
 
 @if (count($errors) > 0)
@@ -21,7 +19,7 @@
 </div>
 @endif
 
-    <form action="{{ route('droids.index.store') }}" method="POST" encrypt="multipart/form-data">
+    <form action="{{ route('droids.index.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-12">
@@ -32,8 +30,13 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group d-flex flex-column">
-                    <label for="image">Droid Image</label>
-                    <input type="file" class="form-control" name="image">
+                        <input type="file" name="file" class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }}" >
+                        @if ($errors->has('file'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('file') }}</strong>
+                            </span>
+                        @endif
+
                 </div>
             </div>
             <div class="col-md-12">

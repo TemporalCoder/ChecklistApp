@@ -52,15 +52,20 @@ class DroidsController extends Controller
 
         $newClass = new Droid;
         $newClass['class'] = $request->class;
+        $newClass->save();
+
+        echo $request->file('file')->store('images');
 
 
-        //Image Upload
-        $droidImage = auth()->user()->droids()->create($request->all());
-        if ($request->has('img'))
-        {
-            $droidImage->update(['img' => $request->file('img')->store('images','public')]);
-        }
+
         return back()->withMessage('Image Uploaded');
+        // //Image Upload
+        // $droidImage = auth()->user()->droids()->create($request->all());
+        // if ($request->has('img'))
+        // {
+        //     $droidImage->update(['img' => $request->file('img')->store('images','public')]);
+        // }
+        // return back()->withMessage('Image Uploaded');
     }
 
     /**
