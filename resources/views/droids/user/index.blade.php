@@ -7,12 +7,11 @@
     @foreach($my_droids as $my_droid)
         <div class="col-md-3 mb-5">
             <div class="droid-list">
-                <img src="{{ $my_droid->path }}" alt="{{ $my_droid->class }}" class="img-fluid" style="width:600px; height:400px;">
+                <img src="{{ $my_droid->image }}" alt="{{ $my_droid->class }}" class="img-fluid" style="width:600px; height:400px;">
 
                 <a href="{{ route('droid.user.edit', $my_droid->id) }}" class="btn btn-block btn-info mb-2">
                     {{ $my_droid->class }}
                 </a>
-                <h1>ID: {{ $my_droid->id }}</h1>
 
                 <form action="{{ route('droid.user.destroy', $my_droid->id) }}" method="POST">
                     @csrf

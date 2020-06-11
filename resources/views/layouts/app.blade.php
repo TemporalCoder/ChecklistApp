@@ -53,11 +53,9 @@
                                 <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                @can('add-droids')
                                 <a class="nav-link" href="{{ route('droids.index.index') }}">
                                     Droid Management
                                 </a>
-                                @endcan
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

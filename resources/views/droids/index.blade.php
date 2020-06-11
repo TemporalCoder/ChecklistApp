@@ -17,7 +17,7 @@
                     <h1 class="text-center">{{ $droid->class }}</h1>
                 </div>
                 <div class="body">
-                    <p class="text-center">Testing Dummy Text</p>
+                    <p class="text-center">{{ $droid->description }}</p>
                     <button type="submit" class="btn btn-block btn-success" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button>
                 </div>
             </div>
@@ -27,9 +27,11 @@
     </form>
 <hr>
 <div class="col-md-12">
-    <div class="add-droid text-center">
+@can('add-droids')
+    <div class="droid text-center">
         <a href="{{ route('droids.index.create') }}" class="btn btn-primary">Add Droid</a>
     </div>
 </div>
+@endcan
 
 @endsection

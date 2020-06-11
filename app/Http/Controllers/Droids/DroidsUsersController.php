@@ -20,9 +20,11 @@ class DroidsUsersController extends Controller
      */
     public function index()
     {
+        $user = auth()->user();
         $my_droids = DB::table('droid_user')
         ->join('droids', 'droid_id', '=', 'droids.id')
-        ->select('droid_user.id', 'droids.class', 'droids.path')
+        ->select('droid_user.id', 'droids.class', 'droids.image')
+        ->where('droid_user.user_id', '=', $user->id)
         ->get();
 
         return view('droids.user.index', ['my_droids' => $my_droids]);
