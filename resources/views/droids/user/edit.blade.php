@@ -8,6 +8,5 @@
             {{-- Insert Progress Bar Here To Depict Users Progress --}}<p class="lead text-center" style="color:white;">Progress: 100%</p>
         </div>
     </div>
-
     @endforeach
 @endsection

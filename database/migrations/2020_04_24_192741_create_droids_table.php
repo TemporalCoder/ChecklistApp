@@ -16,7 +16,7 @@ class CreateDroidsTable extends Migration
             $table->id();
             $table->string('class');
             $table->string('description');
-            $table->string('path')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

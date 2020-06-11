@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Droids;
 
-use App\Http\Controllers\Controller;
+use Gate;
 use App\User;
 use App\Droid;
-use App\DroidUser;
 use App\Role;
-use Gate;
+use App\DroidUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class DroidsUsersController extends Controller
 {
@@ -24,9 +24,12 @@ class DroidsUsersController extends Controller
      */
     public function index()
     {
+        //Gets current user->id, filters out assigned droids to that user->id
+        $user = auth()->user();
         $my_droids = DB::table('droid_user')
         ->join('droids', 'droid_id', '=', 'droids.id')
-        ->select('droid_user.id', 'droids.class', 'droids.path')
+        ->select('droid_user.id', 'droids.class', 'droids.image')
+        ->where('droid_user.user_id', '=', $user->id)
         ->get();
 
         return view('droids.user.index', ['my_droids' => $my_droids]);
@@ -50,15 +53,14 @@ class DroidsUsersController extends Controller
      */
     public function store(Request $request)
     {
+        //Assigns a Droid to a user
         $newDroidBuild = $request->input('droidIdentification');
         $newBuild = new DroidUser();
         $newBuild->user_id=auth()->user()->id;
         $newBuild->droid_id=$newDroidBuild;
         $newBuild->save();
-        // dd($newBuild);
 
         return redirect()->route('droid.user.index');
-
     }
 
     /**
@@ -80,6 +82,7 @@ class DroidsUsersController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        //Returns checklist for that droid
         $currentBuilds = DB::table('droid_user')
         ->join('droids', 'droid_id', '=', 'droids.id')
         ->select('droids.class')
@@ -108,6 +111,7 @@ class DroidsUsersController extends Controller
      */
     public function destroy(Request $request, $id)
     {
+        //Deletes Droid from droid_user table
         $my_droids = DB::table('droid_user')->where('droid_user.id', '=', $id);
         $my_droids->delete();
         return redirect()->route('droid.user.index');

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Droids;
 
-use App\Http\Controllers\Controller;
+use Gate;
 use App\User;
 use App\Droid;
-use App\DroidUser;
 use App\Role;
-use Gate;
+use App\DroidUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class DroidsController extends Controller
 {
@@ -24,6 +24,7 @@ class DroidsController extends Controller
      */
     public function index()
     {
+        //Returns a list of all droids
         $droids = Droid::all();
         return view('droids.index', [
            'droids' => $droids,
@@ -38,6 +39,7 @@ class DroidsController extends Controller
 
     public function create()
     {
+        //Returns Add Droid page
         return view('droids.add');
     }
 
@@ -49,31 +51,13 @@ class DroidsController extends Controller
      */
     public function store(Request $request)
     {
-
-        $destinationPath = 'storage\app\images/';
-
+        //Stores new Droid
         $newClass = new Droid;
         $newClass['class'] = $request->class;
         $newClass['description'] = $request->description;
-        $newClass['path'] = $request->file('file')->store('images');
-
-
-        // dd($newClass);
-
+        $newClass['image'] = $request->file('file')->store('images');
         $newClass->save();
-
-
-
-
-
         return back()->withMessage('Image Uploaded');
-        // //Image Upload
-        // $droidImage = auth()->user()->droids()->create($request->all());
-        // if ($request->has('img'))
-        // {
-        //     $droidImage->update(['img' => $request->file('img')->store('images','public')]);
-        // }
-        // return back()->withMessage('Image Uploaded');
     }
 
     /**

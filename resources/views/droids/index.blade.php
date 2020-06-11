@@ -26,10 +26,11 @@
     </div>
     </form>
 <hr>
+@can('add-droids')
 <div class="col-md-12">
-    <div class="add-droid text-center">
+    <div class="droid text-center">
         <a href="{{ route('droids.index.create') }}" class="btn btn-primary">Add Droid</a>
     </div>
 </div>
-
+@endcan
 @endsection
