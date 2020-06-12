@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers\Droids;
 
-use App\Http\Controllers\Controller;
+use Gate;
 use App\User;
+use App\Role;
 use App\Droid;
 use App\DroidUser;
-use App\Role;
-use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class DroidsUsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
