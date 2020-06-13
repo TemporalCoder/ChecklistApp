@@ -28,9 +28,17 @@
 <hr>
 @can('add-droids')
 <div class="col-md-12">
+<<<<<<< HEAD
+=======
+@can('add-droids')
+>>>>>>> cd43e6d92e60ec28c2aa6d8f156180d67a97d052
     <div class="droid text-center">
         <a href="{{ route('droids.index.create') }}" class="btn btn-primary">Add Droid</a>
     </div>
 </div>
 @endcan
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd43e6d92e60ec28c2aa6d8f156180d67a97d052
 @endsection

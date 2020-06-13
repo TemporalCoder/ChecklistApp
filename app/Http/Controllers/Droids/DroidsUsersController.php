@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Droids;
 
 use Gate;
 use App\User;
-use App\Droid;
 use App\Role;
+use App\Droid;
+<<<<<<< HEAD
+use App\Role;
+=======
+>>>>>>> cd43e6d92e60ec28c2aa6d8f156180d67a97d052
 use App\DroidUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +28,10 @@ class DroidsUsersController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         //Gets current user->id, filters out assigned droids to that user->id
+=======
+>>>>>>> cd43e6d92e60ec28c2aa6d8f156180d67a97d052
         $user = auth()->user();
         $my_droids = DB::table('droid_user')
         ->join('droids', 'droid_id', '=', 'droids.id')
@@ -88,7 +95,13 @@ class DroidsUsersController extends Controller
         ->select('droids.class')
         ->where('droid_user.id', '=', $id)
         ->get();
-        return view('droids.user.edit', ['currentBuilds' => $currentBuilds]);
+
+        $Parts = DB::table('parts')->get();
+
+        return view('droids.user.edit',
+        ['currentBuilds' => $currentBuilds],
+        ['Parts' => $Parts],
+    );
     }
 
     /**
