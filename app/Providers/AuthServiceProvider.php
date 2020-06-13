@@ -45,5 +45,9 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('admin');
         });
 
+        Gate::define('delete-droids', function($user)
+        {
+            return $user->hasDroid('admin');
+        });
     }
 }

@@ -12,7 +12,6 @@
                 <a href="{{ route('droid.user.edit', $my_droid->id) }}" class="btn btn-block btn-info mb-2">
                     {{ $my_droid->class }}
                 </a>
-
                 <form action="{{ route('droid.user.destroy', $my_droid->id) }}" method="POST">
                     @csrf
                     {{ method_field('DELETE') }}

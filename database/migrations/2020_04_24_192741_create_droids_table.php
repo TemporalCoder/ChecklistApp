@@ -15,7 +15,8 @@ class CreateDroidsTable extends Migration
         Schema::create('droids', function (Blueprint $table) {
             $table->id();
             $table->string('class');
-            $table->string('path')->nullable();
+            $table->string('description');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
