@@ -9,6 +9,30 @@
 
         </div>
     </div>
+    Droid Version - MK3
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>Dome</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($Parts as $Part)
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                            @if($Part->droid_section === 'Dome')
+                                {{ $Part->part_name  }}</label>
+                            @endif
+                        </div>
+                    </td>
+                </tr>
 
-    @endforeach
+        </tbody>
+      </table>
+      @endforeach
+
+      @endforeach
 @endsection

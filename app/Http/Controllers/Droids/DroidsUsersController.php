@@ -87,7 +87,13 @@ class DroidsUsersController extends Controller
         ->select('droids.class')
         ->where('droid_user.id', '=', $id)
         ->get();
-        return view('droids.user.edit', ['currentBuilds' => $currentBuilds]);
+
+        $Parts = DB::table('parts')->get();
+
+        return view('droids.user.edit',
+        ['currentBuilds' => $currentBuilds],
+        ['Parts' => $Parts],
+    );
     }
 
     /**
