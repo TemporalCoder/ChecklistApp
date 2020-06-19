@@ -88,12 +88,15 @@ class DroidsUsersController extends Controller
         ->where('droid_user.id', '=', $id)
         ->get();
 
-        $Parts = DB::table('parts')->get();
+
+        $Parts = DB::table('parts')->groupBy('droid_section')->get();
+        dd($Parts);
 
         return view('droids.user.edit',
         ['currentBuilds' => $currentBuilds],
         ['Parts' => $Parts],
-    );
+        );
+
     }
 
     /**

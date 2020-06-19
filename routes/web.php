@@ -15,8 +15,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 //Home
-Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('logout', 'LoginController@logout');
+Route::get('/', 'HomeController@index')->name('home');
 
 //Admin
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
