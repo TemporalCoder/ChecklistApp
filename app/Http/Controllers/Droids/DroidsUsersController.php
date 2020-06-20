@@ -84,13 +84,18 @@ class DroidsUsersController extends Controller
         //Returns checklist for that droid
         $currentBuilds = DB::table('droid_user')
         ->join('droids', 'droid_id', '=', 'droids.id')
-        ->select('droids.class')
+        ->select('droids.class', 'droids.id')
         ->where('droid_user.id', '=', $id)
         ->get();
 
-
-        $Parts = DB::table('parts')->groupBy('droid_section')->get();
-        dd($Parts);
+        //Displays parts for current droid
+        $Parts = DB::table('parts')
+        ->join('droid_user', 'droid_user.droid_id', '=', 'parts.droids_id')
+        ->where('droid_user.id', '=', $id)
+        ->select('parts.id', 'droid_section', 'sub_section', 'part_name')
+        ->orderBy('droid_section', 'DESC')
+        ->orderBy('sub_section')
+        ->get();
 
         return view('droids.user.edit',
         ['currentBuilds' => $currentBuilds],

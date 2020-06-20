@@ -17,8 +17,16 @@
                         <h1 class="text-center">{{ $droid->class }}</h1>
                     </div>
                     <div class="body">
+                        @if($droid->description == "Full Droid")
                         <p class="text-center">{{ $droid->description }}</p>
                         <button type="submit" class="btn btn-block btn-success" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button>
+                        @elseif($droid->description == "Dome Only")
+                        <p class="text-center">{{ $droid->description }}</p>
+                        <button type="submit" class="btn btn-block btn-info" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button>
+                        @elseif($droid->description == "WIP")
+                        <p class="text-center">{{ $droid->description }}</p>
+                        <button type="submit" class="btn btn-block btn-dark" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -29,6 +37,10 @@
     <div class="col-md-12">
     @can('add-droids')
         <div class="droid text-center">
+            <div class="heading">
+                <h1>Add a new droid</h1>
+                <p clas="lead">You can add a new droid using the button below.</p>
+            </div>
             <a href="{{ route('droids.index.create') }}" class="btn btn-primary">Add Droid</a>
         </div>
     </div>

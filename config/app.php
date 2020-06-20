@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'MrBaddeley Printed Droids'),
+    'name' => env('APP_NAME'),
 
     /*
     |--------------------------------------------------------------------------
