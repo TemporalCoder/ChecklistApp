@@ -41,7 +41,7 @@ class DroidsUsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('droids.user.create');
     }
 
     /**
