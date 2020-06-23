@@ -630,6 +630,7 @@ class ComposerStaticInita54d73e4933c743f29e6ddf4767bd665
         'Dotenv\\Store\\StoreBuilder' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Store/StoreBuilder.php',
         'Dotenv\\Store\\StoreInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Store/StoreInterface.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'DroidDetailsSeeder' => __DIR__ . '/../..' . '/database/seeds/DroidDetailsSeeder.php',
         'DroidsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DroidsTableSeeder.php',
         'Egulias\\EmailValidator\\EmailLexer' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailLexer.php',
         'Egulias\\EmailValidator\\EmailParser' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailParser.php',

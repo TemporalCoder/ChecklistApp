@@ -171,6 +171,7 @@ return array(
     'Dotenv\\Store\\StoreBuilder' => $vendorDir . '/vlucas/phpdotenv/src/Store/StoreBuilder.php',
     'Dotenv\\Store\\StoreInterface' => $vendorDir . '/vlucas/phpdotenv/src/Store/StoreInterface.php',
     'Dotenv\\Validator' => $vendorDir . '/vlucas/phpdotenv/src/Validator.php',
+    'DroidDetailsSeeder' => $baseDir . '/database/seeds/DroidDetailsSeeder.php',
     'DroidsTableSeeder' => $baseDir . '/database/seeds/DroidsTableSeeder.php',
     'Egulias\\EmailValidator\\EmailLexer' => $vendorDir . '/egulias/email-validator/EmailValidator/EmailLexer.php',
     'Egulias\\EmailValidator\\EmailParser' => $vendorDir . '/egulias/email-validator/EmailValidator/EmailParser.php',
