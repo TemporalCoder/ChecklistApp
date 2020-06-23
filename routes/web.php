@@ -31,10 +31,5 @@ Route::namespace('Droids')->prefix('droids')->name('droids.')->group(function(){
 Route::namespace('Droids')->prefix('droids')->name('droid.')->group(function(){
     Route::resource('/user', 'DroidsUsersController');
     Route::post('store', 'DroidsUsersController@store');
-
 });
 
-//Droids Checklist
-Route::namespace('Droids')->prefix('droids')->name('droid.')->group(function(){
-    Route::resource('/checklist', 'ChecklistsController');
-});

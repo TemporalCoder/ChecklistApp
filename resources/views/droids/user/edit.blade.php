@@ -9,10 +9,11 @@
             <p class="lead text-center" style="color:white;">Progress: 100%</p>
         </div>
     </div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-10 col-md-10">
+    @endforeach
+    <div class="row mt-5">
+        <div class="col-md-6 mb-5">
+            <div class="checklist">
+                <h1 class="text-center">Checklist</h1>
             <?php
                 $section = '';
                 $sub_section = 'xxx';
@@ -57,13 +58,56 @@
                 @endforeach
                     </div>
                 </div>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <div class="droidInfo">
+                    @foreach($droidDetails as $droidDetail)
+
+                    <table class="table table-responsive text-center">
+                        <h1 class="text-center">Droid Information</h1>
+                        <tbody>
+                            <tr>
+                                <th>Builder's Name</th>
+                                <td>{{ $droidDetail->builder_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Droid Description</th>
+                                <td>{{ $droidDetail->description }}</td>
+                            </tr>
+                            <tr>
+                                <th>Colour Scheme</th>
+                                <td>#{{ $droidDetail->colors }}</td>
+                            </tr>
+                            <tr>
+                                <th>Static/Moving?</th>
+                                <td>{{ $droidDetail->mobility }}</td>
+                            </tr>
+                            <tr>
+                                <th>Electronics</th>
+                                <td>{{ $droidDetail->electronics }}</td>
+                            </tr>
+                            <tr>
+                                <th>Control System</th>
+                                <td>{{ $droidDetail->control_system }}</td>
+                            </tr>
+                            <tr>
+                                <th>Drive System</th>
+                                <td>{{ $droidDetail->drive_system }}</td>
+                            </tr>
+                            <tr>
+                                <th>Power</th>
+                                <td>{{ $droidDetail->power }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
 
 
 
-    @endforeach
 @endsection
 
 
