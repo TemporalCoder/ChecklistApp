@@ -26,6 +26,9 @@
                         @elseif($droid->description == "WIP")
                         <p class="text-center">{{ $droid->description }}</p>
                         <button type="submit" class="btn btn-block btn-dark" value="{{ $droid->id }}" name="droidIdentification">Build This Droid</button>
+                        @elseif($droid->description == 'Your custom droid')
+                        <p class="text-center">{{ $droid->description }}</p>
+                        <a href="{{ route('droid.user.create') }}"class="btn btn-block btn-dark" value="{{ $droid->id }}" name="droidIdentification">Build a Custom Droid</a>
                         @endif
                     </div>
                 </div>
