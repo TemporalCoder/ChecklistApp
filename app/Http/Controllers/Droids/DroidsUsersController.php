@@ -99,8 +99,10 @@ class DroidsUsersController extends Controller
             ->orderBy('sub_section')
             ->get();
 
-            $droidDetails = DB::table('droid_details')->get();
-            // dd($droidDetails);
+        //Filters Droid Details table by current droid_user_id
+        $droidDetails = DB::table('droid_details')
+            ->where('droid_user_id', '=', $id)
+            ->get();
 
         return view('droids.user.edit', [
             'currentBuilds' => $currentBuilds,
