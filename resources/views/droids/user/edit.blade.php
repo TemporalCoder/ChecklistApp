@@ -65,6 +65,3 @@
 
     @endforeach
 @endsection
-
-
-
