@@ -13,12 +13,13 @@
     <div class="row mt-5">
         <div class="col-md-6 mb-5">
             <div class="checklist">
-                <h1 class="text-center">Checklist</h1>
             <?php
                 $section = '';
                 $sub_section = 'xxx';
             ?>
             <div class="panel-group" id="accordion">
+                <h1 class="text-center">Checklist</h1>
+
                 @foreach($Parts as $Part)
                     {{-- Sections --}}
                     @if($Part->droid_section != $section)

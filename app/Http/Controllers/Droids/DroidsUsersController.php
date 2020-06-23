@@ -99,7 +99,10 @@ class DroidsUsersController extends Controller
             ->orderBy('sub_section')
             ->get();
 
-            $droidDetails = DB::table('droid_details')->get();
+            $droidDetails = DB::table('droid_details')
+            ->where('droid_user_id', '=', $id)
+            ->get();
+
             // dd($droidDetails);
 
         return view('droids.user.edit', [
