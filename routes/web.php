@@ -21,7 +21,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/dashboard', 'AdminsController');
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-    Route::resource('/droids', 'AdminsController');
+    Route::resource('/droids', 'DashboardDroidsController');
 });
 
 //Droids General

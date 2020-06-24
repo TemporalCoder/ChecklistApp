@@ -15,11 +15,11 @@
     <body>
         <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-        @foreach($images as $image)
+        {{-- @foreach($images as $image) --}}
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ $image }}" alt="First slide">
+                {{-- <img class="d-block w-100" src="{{ $image }}" alt="First slide"> --}}
               </div>
-        @endforeach
+        {{-- @endforeach --}}
             </div>
           </div>
 
