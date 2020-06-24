@@ -13,6 +13,15 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+        {{-- @foreach($images as $image) --}}
+              <div class="carousel-item active">
+                {{-- <img class="d-block w-100" src="{{ $image }}" alt="First slide"> --}}
+              </div>
+        {{-- @endforeach --}}
+            </div>
+          </div>
 
         <div class="flex-center position-ref full-height">
             <div class="content">
@@ -32,6 +41,9 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.querySelector('.carousel-inner > div:first-child').classList.add('active');
+        </script>
     </body>
 </html>
 @endsection

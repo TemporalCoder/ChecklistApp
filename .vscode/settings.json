@@ -2,5 +2,6 @@
     "cSpell.words": [
         "Barryvdh",
         "droidinfo"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
